@@ -1,0 +1,95 @@
+* { /* normalização com o seletor universal */
+    margin: 0;
+    padding: 0;
+}
+
+:root { /* declaração das variáveis globais */       
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+h1, h2, a, p {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--White);
+}
+
+.primaryTitle {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.secundaryTitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--Green);
+}
+
+.description {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Grey900);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 80vh;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--Grey800);
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-repeat: no-repeat; /* não permitir a repetição da imagem */
+    background-size: cover;
+    background-image: url(./assets/images/avatar-jessica.jpeg);
+}
+
+.titles {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Grey700);
+    width: 280px;
+    height: 42px;
+    text-decoration: none; /* remove os sublinhados dos links */
+    white-space: nowrap; /* remove a quebra de linha */ 
+    border-radius: 8px;
+    transition-duration: 0.3s; /* duração da transição */
+}
+
+.links a:hover { /* adiciona animação ao pasar o mouse por cima */
+    background-color: var(--Green);
+    color: var(--Grey900)
+}
